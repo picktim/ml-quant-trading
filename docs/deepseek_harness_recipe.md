@@ -16,6 +16,11 @@ It only wraps the benchmark, artifact validation, and report-drafting workflow;
 it does not add a trading agent, model-provider configuration, market-data
 access, or an agent runtime dependency to this repository.
 
+The plugin is listed in
+[`awesome-dsh-plugin`](https://awesome-dsh-plugin.com/#development--runtime), so
+DSH users can discover the benchmark path from the public plugin index and then
+land back on this repository with a concrete report template.
+
 ## Why This Fits
 
 `ml-quant-trading` already has agent-friendly properties:
@@ -135,7 +140,7 @@ rather than opening a new benchmark format.
 
 If the run was performed through DeepSeek Harness, use the dedicated
 [DeepSeek Harness benchmark report](https://github.com/initial-d/ml-quant-trading/issues/new?template=deepseek_harness_benchmark.yml)
-so the prompt, transcript, and benchmark artifact stay together.
+so the prompt, transcript, benchmark artifact, and discovery path stay together.
 
 See the seed DSH benchmark report in
 [#61](https://github.com/initial-d/ml-quant-trading/issues/61). The plugin

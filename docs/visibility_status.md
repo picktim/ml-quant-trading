@@ -36,6 +36,10 @@ This page tracks the current public launch surface for `ml-quant-trading`.
 - Benchmark and reproduction discussion: <https://github.com/initial-d/ml-quant-trading/discussions/13>
 - Benchmark call issue: <https://github.com/initial-d/ml-quant-trading/issues/7>
 - Pairing and public-data validation issue: <https://github.com/initial-d/ml-quant-trading/issues/22>
+- DeepSeek Harness benchmark recipe: <https://github.com/initial-d/ml-quant-trading/blob/main/docs/deepseek_harness_recipe.md>
+- DSH benchmark plugin: <https://github.com/initial-d/dsh-plugin-mlquant-benchmark>
+- Awesome DSH Plugin listing: <https://awesome-dsh-plugin.com/#development--runtime>
+- Awesome DSH Plugin PR #2573: <https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/2573>
 - GitHub Community post: <https://github.com/orgs/community/discussions/201001>
 - v0.2.0 community benchmark milestone: <https://github.com/initial-d/ml-quant-trading/milestone/1>
 - Dev Container setup: `.devcontainer/devcontainer.json`
@@ -49,12 +53,15 @@ This page tracks the current public launch surface for `ml-quant-trading`.
 - Public validation digest for v0.2.0: <https://github.com/initial-d/ml-quant-trading/blob/main/docs/validation_digest_20260720.md>
 - Public validation digest for v0.2.1: <https://github.com/initial-d/ml-quant-trading/blob/main/docs/validation_digest_20260727.md>
 - External cost-metric review and compatibility fix: <https://github.com/initial-d/ml-quant-trading/pull/47>
+- DSH benchmark report template and seed report: <https://github.com/initial-d/ml-quant-trading/issues/61>
+- Awesome DSH Plugin listing merged for the optional DSH benchmark helper: <https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/2573>
 
 ## Current Contributor Funnel
 
 - Community CPU/GPU benchmarks: <https://github.com/initial-d/ml-quant-trading/issues/7>
 - Paired public-data validation and benchmark work: <https://github.com/initial-d/ml-quant-trading/issues/22>
 - Benchmark and reproduction reports: <https://github.com/initial-d/ml-quant-trading/discussions/13>
+- DSH benchmark reports: <https://github.com/initial-d/ml-quant-trading/issues/new?template=deepseek_harness_benchmark.yml>
 
 ## Traffic Snapshot
 
@@ -276,6 +283,8 @@ Primary ask:
 ## Next Iterations
 
 - Add more real benchmark results to `docs/benchmark_board.md`.
+- Track whether the Awesome DSH Plugin listing sends DSH-specific benchmark
+  reports, not just repository views.
 - Add more public-data mini reproductions with larger or differently constructed universes.
 - Ask new users to try the Dev Container and report first-run friction.
 - Post the v0.2.1 validation entrypoint release to one relevant community at a time with a customized note.

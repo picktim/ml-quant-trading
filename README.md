@@ -8,6 +8,7 @@ mask-aware factors to cost-aware portfolios, backtests, and auditable reports.**
 [![Release](https://img.shields.io/github/v/release/initial-d/ml-quant-trading?display_name=tag)](https://github.com/initial-d/ml-quant-trading/releases)
 [![PyPI](https://img.shields.io/pypi/v/mlquantx.svg)](https://pypi.org/project/mlquantx/)
 [![arXiv](https://img.shields.io/badge/arXiv-2507.07107-b31b1b.svg)](https://arxiv.org/abs/2507.07107)
+[![DSH benchmark plugin](https://img.shields.io/badge/DSH-benchmark%20plugin-0f766e)](https://github.com/initial-d/dsh-plugin-mlquant-benchmark)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/downloads/)
 [![MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
@@ -15,6 +16,7 @@ Languages: [English](README.md) | [简体中文](README.zh-CN.md) | [繁體中�
 
 [**Run in Colab**](https://colab.research.google.com/github/initial-d/ml-quant-trading/blob/main/notebooks/quickstart_colab.ipynb)
 · [**Inspect the benchmark**](docs/benchmark_board.md)
+· [**Run with DSH**](docs/deepseek_harness_recipe.md)
 · [**See cost-aware results**](docs/validation_dashboard.md)
 · [**Read the paper**](https://arxiv.org/abs/2507.07107)
 
@@ -113,11 +115,18 @@ in [PR #42](https://github.com/initial-d/ml-quant-trading/pull/42).
 | [PR #42](https://github.com/initial-d/ml-quant-trading/pull/42) | Zero-account AkShare loader enabling CSI 300 validation |
 | [PR #47](https://github.com/initial-d/ml-quant-trading/pull/47) | Clarified cumulative cost-drag units across code, reports, tests, and documentation |
 | [Issue #59](https://github.com/initial-d/ml-quant-trading/issues/59) | Community Apple M4 protocol v1 CPU benchmark with raw caveats preserved |
-| [Issue #61](https://github.com/initial-d/ml-quant-trading/issues/61) | DeepSeek Harness seed run validating the benchmark/reporting path |
+| [DSH benchmark report #61](https://github.com/initial-d/ml-quant-trading/issues/61) | Seed DeepSeek Harness benchmark report with prompt, environment, artifact, and caveats |
 
 Independent results are linked to their pull requests so the environment,
 commands, limitations, and review history remain inspectable. Want to add
 another machine or universe? [Run the zero-account Colab and submit the generated report](https://colab.research.google.com/github/initial-d/ml-quant-trading/blob/main/notebooks/quickstart_colab.ipynb).
+
+DeepSeek Harness users can install the
+[optional benchmark plugin](https://github.com/initial-d/dsh-plugin-mlquant-benchmark),
+which is listed in
+[Awesome DSH Plugin](https://awesome-dsh-plugin.com/#development--runtime), then
+submit a structured
+[DSH benchmark report](https://github.com/initial-d/ml-quant-trading/issues/new?template=deepseek_harness_benchmark.yml).
 
 This repository is validation-first: simple baselines, transaction costs,
 public-data failure modes, and negative results are documented alongside the

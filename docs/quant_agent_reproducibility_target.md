@@ -65,6 +65,9 @@ Plugin repository:
 First release:
 [`v0.1.0`](https://github.com/initial-d/dsh-plugin-mlquant-benchmark/releases/tag/v0.1.0).
 
+Discovery:
+[`awesome-dsh-plugin`](https://awesome-dsh-plugin.com/#development--runtime).
+
 ## Suggested Agent Prompt
 
 ```text
