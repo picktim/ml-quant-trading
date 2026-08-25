@@ -23,6 +23,13 @@ Then open a benchmark issue, paste the printed Markdown table, and attach the
 generated `artifacts/benchmark-v1.json`. `make benchmark` is an equivalent
 shortcut on systems with GNU Make.
 
+DeepSeek Harness users can use the
+[`dsh-plugin-mlquant-benchmark`](https://github.com/initial-d/dsh-plugin-mlquant-benchmark)
+helper and submit through the
+[DSH benchmark report template](https://github.com/initial-d/ml-quant-trading/issues/new?template=deepseek_harness_benchmark.yml).
+DSH reports should preserve the prompt, transcript or summary, JSON artifact,
+and the same caveats as shell-only runs.
+
 The command above is the canonical protocol v1 CPU run. It fixes the synthetic
 panel at 750 dates x 1000 stocks, the 20-day window, seed 42, 3 warmups, 10
 measured repetitions, and both PyTorch thread pools at one thread. Optional GPU,
@@ -49,6 +56,7 @@ python scripts/benchmark_tensor_factors.py \
 |---|---|---|---|---|---:|---|---|---|---|
 | Maintainer | `2765d19` | Windows 11 10.0.26200 | 3.14.4 | 2.11.0+cpu | 1 / 1 | Intel Core i7-1255U, 10 cores / 12 threads | none | `make benchmark` | CPU-only protocol v1 baseline |
 | [@sergio12S](https://github.com/sergio12S) | `2a91c6b` | macOS 26.5.2 arm64 | 3.10.16 | 2.13.0 | 1 / 1 | Apple M4, 10 logical CPUs | none | canonical protocol v1 command in [issue #59](https://github.com/initial-d/ml-quant-trading/issues/59) | Community CPU report; `ts_corr` unstable across repeats |
+| Maintainer via DSH | `960de19` | Windows 11 10.0.26200 | 3.14.4 | 2.11.0+cpu | 1 / 1 | Intel Core i7-1255U, 10 cores / 12 threads | none | DSH-assisted command in [issue #61](https://github.com/initial-d/ml-quant-trading/issues/61) | Agent-assisted seed report; high variance on `ts_corr` and `ts_rank` |
 
 ### Maintainer Protocol v1: Intel Core i7-1255U
 
@@ -118,6 +126,44 @@ while the other cases stayed within roughly 10%. The report also notes that a
 historical `ts_rank` difference across commits is confounded by benchmark-script
 and runtime changes. Keep both caveats attached to the numbers; do not infer a
 PyTorch or hardware speedup from them.
+
+### DSH Seed Protocol v1: Intel Core i7-1255U
+
+Environment and raw results are preserved in [issue #61](https://github.com/initial-d/ml-quant-trading/issues/61).
+This is a maintainer seed report produced through DeepSeek Harness. It is
+included to verify the agent-assisted run, validation, and report path; it is
+not an independent machine report or a controlled hardware ranking.
+
+Environment:
+
+- Contributor: Maintainer via DeepSeek Harness
+- Commit: `960de1953f8589467456ad92bf9e4f978c3f0f1b`
+- Protocol: `v1`
+- Machine: Intel Core i7-1255U, 10 cores / 12 threads
+- OS: Windows 11 10.0.26200
+- Python: 3.14.4
+- PyTorch: 2.11.0+cpu
+- PyTorch threads / interop threads: 1 / 1
+- CUDA available: false
+- Synthetic panel: 750 dates x 1000 stocks
+- Window: 20
+- Warmup / repeat: 3 / 10
+- Seed: 42
+- Exact command: the DSH-assisted protocol command in issue #61
+
+| Device | Case | Mean | Std | Peak CUDA memory |
+| --- | --- | ---: | ---: | ---: |
+| cpu | `cs_rank(close)` | 209.5 ms | 33.4 ms | - |
+| cpu | `ts_mean(close,20)` | 37.6 ms | 6.1 ms | - |
+| cpu | `ts_rank(close,20)` | 177.3 ms | 61.0 ms | - |
+| cpu | `ts_corr(close,returns,20)` | 295.8 ms | 151.5 ms | - |
+| cpu | `ewma(close,0.05)` | 51.7 ms | 9.0 ms | - |
+| cpu | `compute_legacy_set(6 factors)` | 756.9 ms | 131.5 ms | - |
+
+The report records the DSH prompt, the corrected command after an accidental
+trailing argument, the generated JSON artifact path, and caveats. Treat the
+numbers as evidence that DSH can preserve the benchmark workflow and artifact
+boundary, not as a performance claim.
 
 ## Pre-Protocol Machine Snapshots
 
