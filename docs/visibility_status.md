@@ -64,6 +64,10 @@ This page tracks the current public launch surface for `ml-quant-trading`.
 - Paired public-data validation and benchmark work: <https://github.com/initial-d/ml-quant-trading/issues/22>
 - Benchmark and reproduction reports: <https://github.com/initial-d/ml-quant-trading/discussions/13>
 - DSH benchmark reports: <https://github.com/initial-d/ml-quant-trading/issues/new?template=deepseek_harness_benchmark.yml>
+- Review-driven follow-ups from Awesome AI Trading Research:
+  [cost/slippage stress scenarios](https://github.com/initial-d/ml-quant-trading/issues/63),
+  [bootstrap confidence intervals](https://github.com/initial-d/ml-quant-trading/issues/64),
+  and [cross-market public validation](https://github.com/initial-d/ml-quant-trading/issues/65).
 
 ## Traffic Snapshot
 

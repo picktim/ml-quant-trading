@@ -10,6 +10,10 @@ easier to trust, and easier to extend.
 - Expand first-run onboarding based on new user feedback.
 - Add more examples for factor IC, attribution, and regime-specific diagnostics.
 - Add independent reproductions with explicit survivorship-bias and point-in-time data controls.
+- Follow up the Awesome AI Trading Research review with scoped work on
+  [bootstrap confidence intervals](https://github.com/initial-d/ml-quant-trading/issues/64),
+  [cross-market public validation](https://github.com/initial-d/ml-quant-trading/issues/65),
+  and [cost/slippage stress scenarios](https://github.com/initial-d/ml-quant-trading/issues/63).
 - Publish the package to PyPI so new users can install a tagged release without cloning.
 - Keep the contributor funnel focused on a small set of current, reviewable issues.
 
@@ -31,6 +35,8 @@ easier to trust, and easier to extend.
 - Add a small example using a custom CSV data source.
 - Add benchmark results through the benchmark issue template.
 - Run `scripts/public_data_validation.py` on a new public-data universe and report the exact command.
+- Pick up one review-driven validation task: bootstrap CIs, cross-market public
+  data, or cost/slippage stress testing.
 - Improve docstrings for factor families.
 - Add one new ETF or larger-universe public-data example with a clearly documented universe.
 
@@ -39,7 +45,9 @@ easier to trust, and easier to extend.
 - Expand Alpha101 formula coverage.
 - Add factor selection examples.
 - Add cross-validation and walk-forward evaluation examples.
+- Add bootstrap confidence intervals for validation metrics.
 - Add ablation scripts for bias correction, losses, and transaction costs.
+- Add non-default cost and slippage stress scenarios for public validation.
 - Add portfolio attribution reports.
 
 ## Engineering Extensions
