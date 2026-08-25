@@ -13,6 +13,7 @@ This page tracks the current public launch surface for `ml-quant-trading`.
 - Awesome Quant listing (Factor Analysis): <https://github.com/wilsonfreitas/awesome-quant#factor-analysis>
 - ernie55ernie Awesome Quant listing (Research Frameworks): <https://github.com/ernie55ernie/awesome-quant>
 - Awesome AI Trading Research listing (B1 Factor Investing): <https://github.com/ohselab/awesome-ai-trading-research/blob/main/papers.md#b1-factor-investing-23>
+- Awesome AI Trading Research full-text evaluation (A-tier, with caveats): <https://github.com/ohselab/awesome-ai-trading-research/issues/1#issuecomment-5406093265>
 - v0.1.0 release: <https://github.com/initial-d/ml-quant-trading/releases/tag/v0.1.0>
 - v0.2.0 release: <https://github.com/initial-d/ml-quant-trading/releases/tag/v0.2.0>
 - v0.2.1 release: <https://github.com/initial-d/ml-quant-trading/releases/tag/v0.2.1>
@@ -55,6 +56,7 @@ This page tracks the current public launch surface for `ml-quant-trading`.
 - External cost-metric review and compatibility fix: <https://github.com/initial-d/ml-quant-trading/pull/47>
 - DSH benchmark report template and seed report: <https://github.com/initial-d/ml-quant-trading/issues/61>
 - Awesome DSH Plugin listing merged for the optional DSH benchmark helper: <https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/2573>
+- Awesome AI Trading Research full-text review and B1 Factor Investing listing: <https://github.com/ohselab/awesome-ai-trading-research/issues/1#issuecomment-5406093265>
 
 ## Current Contributor Funnel
 
@@ -86,6 +88,10 @@ Operating takeaways:
 - Discovery is increasingly attached to inspectable technical artifacts rather
   than generic launch copy. The next high-value conversion is an independent
   CUDA benchmark or additional protocol v1 CPU reports.
+- External evaluation now includes an Awesome AI Trading Research full-text
+  review. Treat the A-tier listing as a discovery signal while preserving the
+  review's caveats: cross-market validation, bootstrap confidence intervals,
+  and more realistic cost assumptions remain future strengthening targets.
 - Clone and download counts are activity signals, not unique adoption or
   investment evidence; keep reporting environment metadata and limitations.
 
