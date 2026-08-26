@@ -81,6 +81,8 @@ PRESETS = {
 
 DEFAULT_MODELS = ("equal_weight", "momentum_20", "alpha101_mean", "mlp_alpha101", "transformer_alpha101")
 CSI_300_PRESETS = {"csi-300", "hs300"}
+BOOTSTRAP_METHOD = "moving-block bootstrap over portfolio returns"
+BOOTSTRAP_CONFIDENCE_LEVEL = 0.95
 
 
 @dataclass(frozen=True)
@@ -471,7 +473,7 @@ def _bootstrap_intervals(
     samples: int,
     block_size: int,
     seed: int,
-) -> dict[str, float | int]:
+) -> dict[str, float | int | str]:
     if samples <= 0 or returns.size < 2:
         return {}
     block_size = max(1, min(block_size, returns.size))
@@ -488,8 +490,11 @@ def _bootstrap_intervals(
     ann_low, ann_high = np.percentile(ann_returns, [2.5, 97.5])
     sharpe_low, sharpe_high = np.percentile(sharpes, [2.5, 97.5])
     return {
+        "bootstrap_method": BOOTSTRAP_METHOD,
+        "bootstrap_confidence_level": BOOTSTRAP_CONFIDENCE_LEVEL,
         "bootstrap_samples": int(samples),
         "bootstrap_block_size": int(block_size),
+        "bootstrap_seed": int(seed),
         "ann_return_ci_low": float(ann_low),
         "ann_return_ci_high": float(ann_high),
         "sharpe_ci_low": float(sharpe_low),
@@ -547,8 +552,11 @@ def _metadata(cfg: ValidationConfig, panel: Panel) -> dict[str, object]:
         "slippage_bps": cfg.slippage_bps,
         "effective_costs_bps": cfg.costs_bps + cfg.slippage_bps,
         "cost_grid_bps": list(cfg.cost_grid_bps),
+        "bootstrap_method": BOOTSTRAP_METHOD if cfg.bootstrap_samples else "disabled",
+        "bootstrap_confidence_level": BOOTSTRAP_CONFIDENCE_LEVEL if cfg.bootstrap_samples else None,
         "bootstrap_samples": cfg.bootstrap_samples,
         "bootstrap_block_size": cfg.bootstrap_block_size,
+        "bootstrap_seed_base": cfg.seed if cfg.bootstrap_samples else None,
         "train_window": cfg.train_window,
         "test_window": cfg.test_window,
         "step": cfg.step,
@@ -795,6 +803,14 @@ def _submission_body(metadata: dict[str, object], rows: Sequence[dict[str, float
             "- Please mention any data-provider warnings, failed tickers, rate limits, or local changes.",
         ]
     )
+    if metadata.get("bootstrap_samples"):
+        lines.extend(
+            [
+                "- Bootstrap intervals use a moving-block bootstrap over daily portfolio returns.",
+                f"- Bootstrap confidence level: {metadata['bootstrap_confidence_level']}",
+                f"- Bootstrap samples / block size: {metadata['bootstrap_samples']} / {metadata['bootstrap_block_size']} days",
+            ]
+        )
     return "\n".join(lines)
 
 
@@ -852,7 +868,10 @@ def _write_outputs(
         if limitations:
             f.write(f"| Source limitations | {'<br>'.join(str(note) for note in limitations)} |\n")
         if cfg.bootstrap_samples:
+            f.write(f"| Bootstrap method | {BOOTSTRAP_METHOD} |\n")
+            f.write(f"| Bootstrap confidence level | {BOOTSTRAP_CONFIDENCE_LEVEL:.2f} |\n")
             f.write(f"| Bootstrap samples / block size | {cfg.bootstrap_samples} / {cfg.bootstrap_block_size} days |\n")
+            f.write(f"| Bootstrap seed base | {cfg.seed} |\n")
         f.write(f"| Walk-forward train/test/step | {cfg.train_window}/{cfg.test_window}/{cfg.step} days |\n")
         f.write(f"| Python | {platform.python_version()} |\n")
         f.write(f"| Platform | {platform.platform()} |\n")

@@ -66,16 +66,23 @@ def test_public_data_validation_runs_on_synthetic(tmp_path: Path):
     assert metadata["cost_grid_bps"] == [0.0, 7.0, 15.0]
     assert metadata["bootstrap_samples"] == 25
     assert metadata["bootstrap_block_size"] == 10
+    assert metadata["bootstrap_method"] == "moving-block bootstrap over portfolio returns"
+    assert metadata["bootstrap_confidence_level"] == 0.95
+    assert metadata["bootstrap_seed_base"] == 7
     assert "tradable_ratio" in metadata["panel"]
 
     summary = json.loads((tmp_path / "summary.json").read_text())
     assert len(summary["cost_sensitivity"]) == 9
     assert summary["cost_sensitivity"][0]["effective_costs_bps"] == 0.0
     assert summary["results"][0]["bootstrap_samples"] == 25
+    assert summary["results"][0]["bootstrap_method"] == "moving-block bootstrap over portfolio returns"
+    assert summary["results"][0]["bootstrap_confidence_level"] == 0.95
+    assert summary["results"][0]["bootstrap_seed"] == 7
 
     submission = (tmp_path / "submission.md").read_text()
     assert "Public-data validation report" in submission
     assert "Data Coverage" in submission
+    assert "Bootstrap intervals use a moving-block bootstrap" in submission
 
 
 def test_public_data_validation_markdown_escapes_pipes():

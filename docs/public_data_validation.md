@@ -262,6 +262,11 @@ The bootstrap samples contiguous return blocks instead of individual days so the
 resampled paths preserve some short-horizon autocorrelation. The output adds:
 
 ```text
+bootstrap_method
+bootstrap_confidence_level
+bootstrap_samples
+bootstrap_block_size
+bootstrap_seed
 ann_return_ci_low
 ann_return_ci_high
 sharpe_ci_low
@@ -270,7 +275,8 @@ sharpe_ci_high
 
 These intervals are diagnostics, not formal proof of statistical significance.
 They are most useful for spotting fragile point estimates and for comparing
-community reports that use the same universe and date range.
+community reports that use the same universe, date range, sample count, block
+size, and seed policy.
 
 ## Metric Glossary
 
