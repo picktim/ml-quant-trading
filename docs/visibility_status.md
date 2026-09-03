@@ -71,6 +71,28 @@ This page tracks the current public launch surface for `ml-quant-trading`.
 
 ## Traffic Snapshot
 
+Recorded on 2026-09-03 from GitHub's rolling 14-day traffic window
+(latest daily bucket available through 2026-09-02):
+
+- Views: 2,093 total, 212 unique visitors.
+- Clones: 568 total, 177 unique cloners.
+- Repository stars/forks/watchers at snapshot time: 81 stars, 34 forks, 4 watchers.
+- Recent daily clone activity remains high relative to stars: 30 clones from
+  20 unique cloners on 2026-09-01 and 19 clones from 16 unique cloners on
+  2026-09-02.
+
+Operating takeaways:
+
+- Clone behavior is still stronger than visible social feedback, which is
+  consistent with private evaluation by quant, research, or agent-benchmark
+  users.
+- The next conversion target is not a generic star request. It is a
+  redaction-safe path for private users to share environment summaries,
+  aggregate metrics, blockers, and possible citation intent.
+- A private evaluation checklist and issue template were added so users can
+  contribute useful evidence without exposing proprietary data or strategy
+  details.
+
 Recorded on 2026-08-22 from GitHub's rolling 14-day traffic window
 (latest daily bucket available through 2026-08-20):
 

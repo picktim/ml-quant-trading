@@ -1,0 +1,128 @@
+name: Private evaluation note
+description: Share a redacted summary from a private or institutional evaluation.
+title: "[private-eval] "
+labels: ["reproducibility", "community"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form when you can share a limited public summary but cannot
+        disclose proprietary data, strategy details, account information, or
+        internal infrastructure.
+
+        Do not include API keys, account ids, private datasets, holdings,
+        order logs, broker details, internal hostnames, or production strategy
+        rules. Aggregate metrics and redacted environment notes are enough.
+
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: Outcome
+      description: What happened during the evaluation?
+      options:
+        - Useful as-is
+        - Useful after local changes
+        - Partially useful
+        - Failed but informative
+        - Not suitable for this use case
+    validations:
+      required: true
+
+  - type: input
+    id: commit
+    attributes:
+      label: Commit SHA or release
+      description: The commit, release tag, or package version evaluated.
+      placeholder: "v0.2.6 or 9dc0c3b"
+    validations:
+      required: true
+
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Redacted use case
+      description: Describe the use case at a safe level of detail.
+      placeholder: |
+        Example: cross-sectional factor pipeline evaluation on private
+        daily equity data; no live trading or order execution.
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Python, PyTorch, CPU/GPU, CUDA, and any relevant container or notebook setup.
+      placeholder: |
+        OS:
+        Python:
+        PyTorch:
+        CPU:
+        GPU:
+        CUDA available:
+        Install path: pip / source checkout / container / notebook
+    validations:
+      required: true
+
+  - type: textarea
+    id: data_summary
+    attributes:
+      label: Data summary
+      description: Share only aggregate dataset properties.
+      placeholder: |
+        Source category: synthetic / public API / public CSV / private vendor
+        Market:
+        Frequency:
+        Date range:
+        Universe size:
+        Failed symbols or missing fields:
+    validations:
+      required: true
+
+  - type: textarea
+    id: results
+    attributes:
+      label: Aggregate results
+      description: Share aggregate runtime, memory, IC, turnover, cost, or backtest diagnostics that are safe to publish.
+      placeholder: |
+        Runtime:
+        Peak memory:
+        Factor count:
+        Rank IC:
+        Turnover:
+        Cost assumptions:
+        Sharpe / drawdown / final equity:
+        Comparison baseline:
+    validations:
+      required: false
+
+  - type: textarea
+    id: changes
+    attributes:
+      label: Local changes or blockers
+      description: Summarize any local patches, missing interfaces, data-shape friction, or unclear docs without exposing private code.
+    validations:
+      required: false
+
+  - type: textarea
+    id: citation
+    attributes:
+      label: Citation or reference intent
+      description: Tell us whether this may become a paper citation, internal benchmark, blog post, class project, or only private evaluation.
+      placeholder: |
+        Example: possible methods citation in an internal research note;
+        no public paper planned yet.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Disclosure checks
+      options:
+        - label: I removed credentials, account identifiers, private paths, positions, orders, and proprietary data.
+          required: true
+        - label: I understand that this project is research software and not investment advice.
+          required: true
+        - label: I am comfortable with this redacted summary being public.
+          required: true

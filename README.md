@@ -34,6 +34,10 @@ shareable Markdown and JSON reports.
 Once it runs, you can [inspect the benchmark](docs/benchmark_board.md) or
 [share a reproduction report](https://github.com/initial-d/ml-quant-trading/issues/new?template=reproduction_report.yml).
 If the baseline is useful, a Star helps other researchers find it.
+Evaluating privately? Use the
+[private evaluation checklist](docs/private_evaluation_checklist.md) or submit a
+[redacted evaluation note](https://github.com/initial-d/ml-quant-trading/issues/new?template=private_evaluation_note.yml)
+without exposing proprietary data, positions, or strategy details.
 
 | 213 factors | 4 data paths | 100 tests | CPU/GPU benchmark |
 |---:|---:|---:|---:|
@@ -83,6 +87,7 @@ python -m pip install -e '.[dev]'
 | Run paper-style public validation | [AkShare CSI 300 Daily 213-Factor Report](docs/validation_akshare_csi300_full_pipeline_20260729.md) | Daily 213-factor public-data approximation with turnover control |
 | Use DeepSeek Harness or a coding agent | [DeepSeek Harness Recipe](docs/deepseek_harness_recipe.md) · [optional DSH plugin](https://github.com/initial-d/dsh-plugin-mlquant-benchmark) · [Agent Reproducibility Guide](docs/agent_reproducibility.md) | Agent-ready benchmark and validation workflows without adding an agent runtime dependency |
 | Evaluate a quant agent | [Quant Agent Reproducibility Target](docs/quant_agent_reproducibility_target.md) | A fixed benchmark/reporting target for agent harnesses without live trading claims |
+| Evaluate privately | [Private Evaluation Checklist](docs/private_evaluation_checklist.md) | A redaction-safe way to record private or institutional runs |
 | Contribute one run | [Reproduction report form](https://github.com/initial-d/ml-quant-trading/issues/new?template=reproduction_report.yml) | Run Colab, submit the generated report, and receive README credit |
 
 ## Validation Dashboard

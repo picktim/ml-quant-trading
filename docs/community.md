@@ -38,6 +38,18 @@ Add tests for tensor operations, neutralization, bias correction, or backtesting
 
 Document ablations, failed experiments, or limitations. Honest negative results are useful.
 
+### Private Evaluation Notes
+
+Some users can evaluate the project but cannot disclose proprietary data,
+holdings, order logs, factor weights, or strategy rules. Redacted summaries are
+still useful when they include the commit, environment, data category, universe
+size, aggregate metrics, and blockers.
+
+Use the [private evaluation checklist](private_evaluation_checklist.md) before
+posting, then submit a
+[private evaluation note](https://github.com/initial-d/ml-quant-trading/issues/new?template=private_evaluation_note.yml)
+if the result can be shared safely.
+
 ## Maintainer Response Rules
 
 - Reply to reproducibility reports first.
@@ -79,6 +91,7 @@ baseline workflow.
 
 - People can run the quick start.
 - Users submit benchmark results.
+- Private users share redacted evaluation notes without exposing strategies.
 - External users ask reproducibility questions.
 - Small docs PRs arrive.
 - Public-data examples improve.
