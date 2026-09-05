@@ -15,6 +15,7 @@ mask-aware factors to cost-aware portfolios, backtests, and auditable reports.**
 Languages: [English](README.md) | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md)
 
 [**Run in Colab**](https://colab.research.google.com/github/initial-d/ml-quant-trading/blob/main/notebooks/quickstart_colab.ipynb)
+· [**Agent benchmark challenge**](docs/agent_quant_benchmark_challenge.md)
 · [**Inspect the benchmark**](docs/benchmark_board.md)
 · [**Run with DSH**](docs/deepseek_harness_recipe.md)
 · [**See cost-aware results**](docs/validation_dashboard.md)
@@ -85,6 +86,7 @@ python -m pip install -e '.[dev]'
 | Run a larger validation | [Public-Data Validation](docs/public_data_validation.md) | Walk-forward baselines, costs, turnover, bootstrap CIs, and report artifacts |
 | Run A-share validation | [AkShare CSI 300 Report](docs/validation_akshare_csi300_20260729.md) | Zero-auth A-share validation on the current CSI 300 public universe |
 | Run paper-style public validation | [AkShare CSI 300 Daily 213-Factor Report](docs/validation_akshare_csi300_full_pipeline_20260729.md) | Daily 213-factor public-data approximation with turnover control |
+| Test a coding or quant agent | [Agent Quant Benchmark Challenge](docs/agent_quant_benchmark_challenge.md) | A zero-account challenge for agent reproducibility, evidence preservation, and caveat discipline |
 | Use DeepSeek Harness or a coding agent | [DeepSeek Harness Recipe](docs/deepseek_harness_recipe.md) · [optional DSH plugin](https://github.com/initial-d/dsh-plugin-mlquant-benchmark) · [Agent Reproducibility Guide](docs/agent_reproducibility.md) | Agent-ready benchmark and validation workflows without adding an agent runtime dependency |
 | Evaluate a quant agent | [Quant Agent Reproducibility Target](docs/quant_agent_reproducibility_target.md) | A fixed benchmark/reporting target for agent harnesses without live trading claims |
 | Evaluate privately | [Private Evaluation Checklist](docs/private_evaluation_checklist.md) | A redaction-safe way to record private or institutional runs |
@@ -309,6 +311,7 @@ It installs Python 3.11 and the project with `python -m pip install -e '.[dev]'`
 - [`docs/release_draft_v0.2.0.md`](docs/release_draft_v0.2.0.md) is the public validation and contributor-workflow release draft.
 - [`docs/release_draft_v0.2.1.md`](docs/release_draft_v0.2.1.md) is the validation entrypoint and outreach follow-through release draft.
 - [`docs/release_draft_v0.2.2.md`](docs/release_draft_v0.2.2.md) is the AkShare public A-share validation release draft.
+- [`docs/release_draft_v0.3.0.md`](docs/release_draft_v0.3.0.md) is the Agent Quant Benchmark Challenge release draft.
 - [`docs/promotion_kit.md`](docs/promotion_kit.md) contains copy-ready social and community posts.
 - [`docs/article_zh_213_factor_csi300.md`](docs/article_zh_213_factor_csi300.md) is the
   long-form Chinese technical launch article.
