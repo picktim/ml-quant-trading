@@ -49,10 +49,10 @@ https://github.com/initial-d/ml-quant-trading
 
 ## Release checklist
 
-- [ ] Confirm CI is green on the release commit.
-- [ ] Confirm README links point to the challenge page.
-- [ ] Publish the GitHub release from this draft.
-- [ ] Open or update the GitHub Discussion challenge thread.
+- [x] Confirm CI is green on the release commit.
+- [x] Confirm README links point to the challenge page.
+- [x] Publish the GitHub release from this draft.
+- [x] Open or update the GitHub Discussion challenge thread.
 - [ ] Share one English post focused on agent reproducibility.
 - [ ] Share one Chinese post focused on "AI agent 能不能真的复现量化研究".
 - [ ] Invite DSH, coding-agent, and quant-research users to submit reports.

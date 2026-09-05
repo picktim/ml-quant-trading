@@ -22,7 +22,10 @@ This page tracks the current public launch surface for `ml-quant-trading`.
 - v0.2.4 release: <https://github.com/initial-d/ml-quant-trading/releases/tag/v0.2.4>
 - v0.2.5 release: <https://github.com/initial-d/ml-quant-trading/releases/tag/v0.2.5>
 - v0.2.6 release: <https://github.com/initial-d/ml-quant-trading/releases/tag/v0.2.6>
+- v0.3.0 release (Agent Quant Benchmark Challenge): <https://github.com/initial-d/ml-quant-trading/releases/tag/v0.3.0>
 - PyPI distribution: <https://pypi.org/project/mlquantx/>
+- Agent Quant Benchmark Challenge: <https://github.com/initial-d/ml-quant-trading/blob/main/docs/agent_quant_benchmark_challenge.md>
+- Agent Quant Benchmark Challenge discussion: <https://github.com/initial-d/ml-quant-trading/discussions/66>
 - Six-invariant technical audit: <https://github.com/initial-d/ml-quant-trading/blob/main/docs/article_en_six_pipeline_invariants.md>
 - Six-invariant technical audit (Chinese): <https://github.com/initial-d/ml-quant-trading/blob/main/docs/article_zh_six_pipeline_invariants.md>
 - Technical audit discussion: <https://github.com/initial-d/ml-quant-trading/discussions/57>
@@ -57,12 +60,14 @@ This page tracks the current public launch surface for `ml-quant-trading`.
 - DSH benchmark report template and seed report: <https://github.com/initial-d/ml-quant-trading/issues/61>
 - Awesome DSH Plugin listing merged for the optional DSH benchmark helper: <https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/2573>
 - Awesome AI Trading Research full-text review and B1 Factor Investing listing: <https://github.com/ohselab/awesome-ai-trading-research/issues/1#issuecomment-5406093265>
+- Agent Quant Benchmark Challenge launched as v0.3.0: <https://github.com/initial-d/ml-quant-trading/discussions/66>
 
 ## Current Contributor Funnel
 
 - Community CPU/GPU benchmarks: <https://github.com/initial-d/ml-quant-trading/issues/7>
 - Paired public-data validation and benchmark work: <https://github.com/initial-d/ml-quant-trading/issues/22>
 - Benchmark and reproduction reports: <https://github.com/initial-d/ml-quant-trading/discussions/13>
+- Agent Quant Benchmark Challenge reports: <https://github.com/initial-d/ml-quant-trading/discussions/66>
 - DSH benchmark reports: <https://github.com/initial-d/ml-quant-trading/issues/new?template=deepseek_harness_benchmark.yml>
 - Review-driven follow-ups from Awesome AI Trading Research:
   [cost/slippage stress scenarios](https://github.com/initial-d/ml-quant-trading/issues/63),
