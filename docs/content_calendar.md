@@ -38,6 +38,17 @@ Theme: "213 factor dimensions in a mask-aware PyTorch engine."
 - Publish both successful and failed variants.
 - Open one tightly scoped contribution issue based on reader questions.
 
+## Special Pulse: Agent Quant Benchmark Challenge
+
+Theme: "Can your coding agent reproduce a real quant research workflow?"
+
+- Publish the v0.3.0 release and challenge discussion.
+- Share one English post with the agent-reproducibility framing.
+- Share one Chinese post with the "AI agent 能不能真的复现量化研究" framing.
+- Ask for agent transcripts, failed runs, and redacted private evaluation notes.
+- Convert the first credible report into README community evidence and a short
+  follow-up post.
+
 ## Reusable Post Hooks
 
 - "I am looking for benchmark results from different CPUs/GPUs."

@@ -11,6 +11,11 @@ and reproducible backtesting.
 
 ## Copy-Ready Posts
 
+For the v0.3.0 Agent Quant Benchmark Challenge, use the dedicated
+[Agent Challenge Outreach Kit](agent_challenge_outreach.md). It contains
+English, Chinese, LinkedIn, Reddit, quant-community, and Zhihu-ready copy while
+keeping the framing on reproducibility rather than trading claims.
+
 ### GitHub / Release Note
 
 I open-sourced `ml-quant-trading`, a runnable research implementation for ML-enhanced
