@@ -22,6 +22,9 @@ This challenge creates a safer public path:
 - reports stay useful for reproducibility and citation without exposing private
   alpha, positions, accounts, or vendor data.
 
+Announcement and coordination thread:
+[`Discussion #66`](https://github.com/initial-d/ml-quant-trading/discussions/66).
+
 ## Tracks
 
 | Track | Entry point | Report template | What it tests |
@@ -66,6 +69,7 @@ alpha. Draft an issue-ready report using the appropriate template.
 
 ## Report links
 
+- [Challenge discussion](https://github.com/initial-d/ml-quant-trading/discussions/66)
 - [Reproduction report](https://github.com/initial-d/ml-quant-trading/issues/new?template=reproduction_report.yml)
 - [Benchmark result](https://github.com/initial-d/ml-quant-trading/issues/new?template=benchmark_result.yml)
 - [DeepSeek Harness benchmark report](https://github.com/initial-d/ml-quant-trading/issues/new?template=deepseek_harness_benchmark.yml)

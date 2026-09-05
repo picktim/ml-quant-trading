@@ -123,6 +123,7 @@ in [PR #42](https://github.com/initial-d/ml-quant-trading/pull/42).
 | [PR #47](https://github.com/initial-d/ml-quant-trading/pull/47) | Clarified cumulative cost-drag units across code, reports, tests, and documentation |
 | [Issue #59](https://github.com/initial-d/ml-quant-trading/issues/59) | Community Apple M4 protocol v1 CPU benchmark with raw caveats preserved |
 | [DSH benchmark report #61](https://github.com/initial-d/ml-quant-trading/issues/61) | Seed DeepSeek Harness benchmark report with prompt, environment, artifact, and caveats |
+| [Agent Quant Benchmark Challenge #66](https://github.com/initial-d/ml-quant-trading/discussions/66) | Challenge thread for coding agents, quant agents, DSH runs, and redacted private evaluations |
 | [Awesome AI Trading Research review](https://github.com/ohselab/awesome-ai-trading-research/issues/1#issuecomment-5406093265) | Full-text curated-list evaluation: A-tier listing, with reproducibility and cross-market caveats |
 
 Independent results are linked to their pull requests so the environment,
