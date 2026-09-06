@@ -1,0 +1,72 @@
+name: Benchmark or reproduction report
+description: Share a machine, market-data, or synthetic-data validation run.
+title: "[Benchmark] "
+labels: ["benchmark", "reproducibility"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for turning a private run into public evidence. Short reports are welcome; exact commands and environment details matter more than polished prose.
+  - type: input
+    id: commit
+    attributes:
+      label: Commit
+      description: Output of `git rev-parse --short HEAD`, or the branch/tag you used.
+      placeholder: "abc1234"
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Python version, CPU/GPU, solver, and any CUDA details.
+      placeholder: |
+        OS:
+        Python:
+        CPU:
+        GPU:
+        Solver:
+    validations:
+      required: true
+  - type: dropdown
+    id: data_path
+    attributes:
+      label: Data path
+      options:
+        - Synthetic data
+        - Public market data
+        - Private / proprietary market data
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: commands
+    attributes:
+      label: Commands
+      description: Include the exact command sequence and config file.
+      placeholder: |
+        python -m pip install -e .[dev]
+        make paper CONFIG=configs/small.yaml
+    validations:
+      required: true
+  - type: textarea
+    id: metrics
+    attributes:
+      label: Results
+      description: Runtime, Sharpe, IC, turnover, drawdown, cost drag, or any other reported metric.
+      placeholder: |
+        Runtime:
+        Sharpe:
+        IC:
+        Turnover:
+        Max drawdown:
+        Cost drag:
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Any caveats, failures, data-source links, slippage assumptions, or reproducibility details.
+    validations:
+      required: false

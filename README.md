@@ -504,6 +504,11 @@ ml-quant-trading/
 
 See [`docs/reproducing_paper.md`](docs/reproducing_paper.md) for table-by-table mapping.
 
+Community benchmark and reproduction reports are welcome. If you run the
+stack on your own hardware, public data, or another market, use the
+[`benchmark report guide`](docs/community_benchmarks.md) so results are
+comparable and citeable.
+
 | Paper section | Code module | Tests |
 |---|---|---|
 | §3.1 Tensor factor engine | `features.tensor_factors` | `test_tensor_factors` |
