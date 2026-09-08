@@ -78,6 +78,38 @@ This page tracks the current public launch surface for `ml-quant-trading`.
 
 ## Traffic Snapshot
 
+Recorded on 2026-09-08 from GitHub's rolling 14-day traffic window
+(latest daily bucket available through 2026-09-05):
+
+- Views: 2,120 total, 192 unique visitors.
+- Clones: 521 total, 173 unique cloners.
+- Repository stars/forks/watchers at snapshot time: 81 stars, 34 forks, 4 watchers.
+- Recent daily clone activity remains high relative to visible social feedback:
+  55 clones from 25 unique cloners on 2026-09-05, after 14-30 daily clones in
+  the preceding September buckets.
+- Top referrers by visits: GitHub (127), Google (40), arXiv (22),
+  ChatGPT (18), Zhihu (5), Doubao (5), Hugging Face (3), Bing (2), and
+  Youdao Note (2). These are visits, not unique-user totals.
+- High-interest paths beyond the repository root include releases, the factor
+  handbook, technical-audit discussions, reproduction-challenge discussions,
+  and PR #47's cost-metric review.
+
+Operating takeaways:
+
+- The project is still being evaluated more than it is being socially
+  endorsed. The right conversion is not "please star"; it is "share a redacted
+  benchmark, reproduction, private-evaluation note, or citation intent."
+- Search, arXiv, ChatGPT, Zhihu, and Hugging Face are all contributing some
+  discovery, which means the current public surface is multi-channel rather
+  than dependent on a single launch post.
+- Releases and technical discussions are attracting repeat attention from a
+  small number of visitors. Keep the highest-value next actions close to those
+  pages: benchmark reports, public-data validation, and cross-market follow-up.
+- The strongest citation conversion path remains independent evidence:
+  protocol v1 CPU/GPU benchmarks, redacted institutional evaluation notes,
+  public-data validation reports, and follow-ups to the Awesome AI Trading
+  Research caveats.
+
 Recorded on 2026-09-03 from GitHub's rolling 14-day traffic window
 (latest daily bucket available through 2026-09-02):
 
